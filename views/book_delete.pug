@@ -11,10 +11,10 @@ block content
       h4 Book Instances 
 
       dl 
-      each book in book_instance
-        dt 
-          a( href = book.url ) #{ book.title }
-        dd #{ book.summary }
+      each val in book_instance
+        dt #[strong Id: ]
+          a( href = val.url ) #{ val._id }
+        dd #[strong Imprint: ] #{ val.imprint }
 
   else 
     p Do you really want to delete this Book?
